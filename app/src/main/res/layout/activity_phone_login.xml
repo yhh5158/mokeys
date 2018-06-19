@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+        <com.room.mokeys.widget.CustomTitleView
+            android:id="@+id/phone_login_custom_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:customTitleText="手机验证"
+            app:customTitleRightimage="false">
+        </com.room.mokeys.widget.CustomTitleView>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.room.mokeys.ui.MClearEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="20dip"
+                    android:paddingRight="10dp"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable='@null'
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="手机号码"
+                    android:maxLength="11"
+                    android:paddingLeft="16dip"
+                    android:numeric="integer"
+                    android:textColor="#666666"
+                    android:background="#999999"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <com.room.mokeys.ui.MClearEditText
+                    android:id="@+id/et_vercode"
+                    android:layout_width="0dp"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="6dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="1"
+                    android:background="#999999"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable='@null'
+                    android:hint="验证码"
+                    android:paddingLeft="16dip"
+                    android:phoneNumber="true"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_get_vercode"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/blue"
+                    android:text="获取验证码"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="300dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/blue"
+                    android:text="确定"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tx_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="@dimen/textsize_10sp"
+                android:text="@string/service_clause"
+                />
+        </LinearLayout>
+
+</LinearLayout>

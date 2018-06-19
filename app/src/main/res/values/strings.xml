@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Mokeys</string>
+    <string name="no_poi_search">没有搜索结果</string>
+    <string name="search_message">搜索中…</string>
+    <string name="search_no_text">搜索为空</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="permission_text">我们需要的一些权限被您拒绝或者系统发生错误申请失败，请您到设置页面手动授权，否则功能无法正常使用！</string>
+    <string name="search_bar_hint">搜索你的最爱</string>
+    <string name="sina">新浪微博</string>
+    <string name="copy">复制链接</string>
+    <string name="tencent_qq">QQ</string>
+    <string name="tencent_qq_zone">QQ空间</string>
+    <string name="tencent_wechat">微信</string>
+    <string name="tencent_wechat_circle">微信朋友圈</string>
+    <string name="mobile_authentication">手机认证</string>
+    <string name="name_authentication">实名认证</string>
+    <string name="paydeposit">充值押金</string>
+    <string name="gopay_deposit">去充值</string>
+    <string name="start_room">开始看房</string>
+    <string name="login">登录</string>
+    <string name="goto_authentication">去认证</string>
+    <string name="input_id_number"> 请输入身份证号</string>
+    <string name="input_name">请输入姓名</string>
+    <string name="authentication_text">请上传手持身份证照片，保证图片上传内容清晰并且不能挡脸</string>
+    <string name="service_clause"><Data><![CDATA[<font color="#999999">点击-确定，即表示已阅读并同意</font><font color="#ff5a01">《看房服务条款》</font>]]></Data></string>
+    <string name="pay_title"><Data><![CDATA[<font color="#999999">当前付款金额</font><font color="#ff5a01">%1$s</font><font color="#999999">元]]></Data></string>
+    <string name="pay_result"><Data><![CDATA[<font color="#999999">总共支付金额：</font><font color="#ff5a01">%1$s</font><font color="#999999">元</font><br><font color="#999999">优惠券支付</font><font color="#ff5a01">%2$s</font><font color="#999999">元</font>]]></Data></string>
+    <string name="alert_dialog_text">我们需要收取一定的费用才能扫码开门！</string>
+    <string name="reserves_tip">您可要去个人中心里面的我的签约去查看签约房源</string>
+    <string name="notlogin_tip">您还没有登录，请点击登录</string>
+    <string name="notlogin_toast">您还没有登录，请先登录</string>
+    <string name="notpay_tip">您还没有支付押金，请先支付押金</string>
+    <string name="notauthentication_tip">您还没有实名认证，请先认证</string>
+    <string name="user_not_auth">用户未认证</string>
+    <string name="user_not_pledge">用户未充押金</string>
+    <string name="user_paid_pledge">用户已充押金</string>
+    <string name="not_found">所访问的资源不存在/为空</string>
+    <string name="house_already_deal">房源已成交（已出租/出售）</string>
+    <string name="house_not_exist">房源不存在</string>
+    <string name="house_already_reserved">房源已被预订</string>
+    <string name="verify_error">验证码错误</string>
+    <string name="method_invalid">请求方法不合法</string>
+    <string name="access_token_expire_error">访问令牌过期</string>
+    <string name="refresh_token_expire_error">刷新令牌过期</string>
+    <string name="user_have_not_signed_contract">用户未签约该合同</string>
+    <string name="reserved_begin_time">预定时间：</string>
+    <string name="reserved_end_time">过期时间：</string>
+    <string name="sign_begin_time">签约时间：</string>
+    <string name="reserved_end_time_tip">这套房子为您保留一段时间,请您尽快完成签约。</string>
+    // String room = "您已经交定金的房子是"+info.getNumber()+"的卧室"+info.getRid();
+    <string name="reserved_result"><Data><![CDATA[<font color="#999999">您预定的房子是：</font><font color="#ff5a01">%1$s</font><font color="#999999"></font><font color="#999999">的卧室</font><font color="#ff5a01">%2$s</font><font color="#999999"></font>]]></Data></string>
+</resources>

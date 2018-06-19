@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f2f2f3">
+    <TextView
+        android:id="@+id/reserver_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/access_token_expire_error"
+        android:textSize="@dimen/textsize_10sp"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="#f2f2f3">
+
+    <ImageView
+        android:id="@+id/reserver_room_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/hourse_default"
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:layout_toRightOf="@id/reserver_room_head"
+        android:layout_alignTop="@id/reserver_room_head"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/reserver_room_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="@dimen/textsize_10sp"
+            android:text="鲨鱼5158"/>
+        <TextView
+            android:id="@+id/reserver_room_finish"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:visibility="visible"
+            android:textSize="@dimen/textsize_10sp"
+            android:text="到期时间"/>
+        <TextView
+            android:id="@+id/collection_time"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="7sp"
+            android:visibility="gone"
+            android:text="RecyclerAdapter"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/reserver_gosign_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="去签约"/>
+</RelativeLayout>
+</LinearLayout>

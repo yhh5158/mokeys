@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.room.mokeys.widget.CustomTitleView
+        android:id="@+id/web_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        </com.room.mokeys.widget.CustomTitleView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.0">
+    <cn.droidlover.xstatecontroller.XStateController
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </cn.droidlover.xstatecontroller.XStateController>
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_bottom_rel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/mokeys_web_signup"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="去签名"
+            android:textSize="@dimen/textsize_14sp"/>
+    </RelativeLayout>
+<LinearLayout
+    android:id="@+id/web_bottom_signature"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:id="@+id/web_bottom_pay"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent"
+        android:text="去支付"
+        android:textSize="@dimen/textsize_14sp"/>
+    <LinearLayout
+        android:id="@+id/web_bottom_signature_lin"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="姓名："
+            android:textSize="@dimen/textsize_14sp"/>
+        <ImageView
+            android:id="@+id/web_bottom_signature_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/signature_default"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

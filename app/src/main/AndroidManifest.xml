@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.room.mokeys">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- 地图权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 地图权限 -->
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/mokeys_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+       >
+        <activity
+            android:name=".maps.ui.maps.MokeysMainActivity"
+            android:icon="@mipmap/mokeys_logo"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".ui.WebActivity" />
+        <activity android:name=".ui.UserCenterActivity" />
+        <activity android:name=".ui.PhoneLoginActivity"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.ActivityStep" />
+        <activity android:name=".ui.ActivityAuthenticaition"
+            android:theme="@style/CustomActivityTheme">
+         <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <!-- android host的值必须为游戏的包名 -->
+        <data android:host="com.mokeys.room"/>
+        <!-- android scheme的值必须不能变-->
+        <data android:scheme="mokeys"/>
+        </intent-filter>
+        </activity>
+        <activity android:name=".setting.UserSettingActivity"
+            android:theme="@style/CustomActivityTheme"
+            />
+        <activity android:name=".ui.SignatureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".pay.PayMainActivity"
+            android:theme="@style/CustomActivityTheme">
+            </activity>
+        <activity android:name=".pay.PayDepositActivity"
+            android:theme="@style/CustomActivityTheme"
+            />
+        <activity android:name=".pay.PayRoomMoneyActivity"
+            android:theme="@style/CustomActivityTheme"
+            />
+        <activity android:name=".ui.ActivityRoomResult"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.MokeysWebActivity"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.ActivityReservesResult"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.MokeysSignatureWebActivity"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.reserveroom.ReserverRoomAcitivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.contractroom.ContractRoomAcitivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@style/CustomActivityTheme"/>
+        <activity android:name=".ui.neighbourhoodroom.NeighbourhoodRoomAcitivity"
+            android:theme="@style/MyPayDialogStyle"/>
+        <activity android:name=".maps.zxing.ScanDoorActivity"
+            android:theme="@style/CustomActivityTheme"/>
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService"></service>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="53c2cd0ff9137b4dec85c05a371336d6" />
+
+
+        <!--Weixin 登录分享-->
+        <activity
+            android:name="com.tsy.sdk.social.weixin.WXCallbackActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity-alias
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.tsy.sdk.social.weixin.WXCallbackActivity" />
+
+        <!--qq 登录分享-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1111111" /> <!--1111111改为你的qq appid-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--微博 登录分享-->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".shareandlogin.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tsy.sdk.pay.weixin.WXPayCallbackActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.tsy.sdk.pay.weixin.WXPayCallbackActivity" />
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+    </application>
+
+</manifest>
